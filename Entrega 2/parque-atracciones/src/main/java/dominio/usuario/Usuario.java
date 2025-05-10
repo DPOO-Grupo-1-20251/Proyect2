@@ -1,4 +1,3 @@
-//Kick Ass
 package dominio.usuario;
 
 import dominio.excepciones.DatosInvalidosException;
