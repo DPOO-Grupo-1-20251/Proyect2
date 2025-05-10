@@ -1,0 +1,134 @@
+[
+  {
+    "tipo": "EntradaIndividual",
+    "codigo": "73870640-3574-4111-80bb-c6bd294ffa0a",
+    "fechaCompra": "2025-05-01T19:12:43.4021416",
+    "precio": 50.0,
+    "idComprador": "C1",
+    "nombreComprador": "Carlos",
+    "esEmpleado": false,
+    "idAtraccion": "A1",
+    "utilizado": false
+  },
+  {
+    "tipo": "FastPass",
+    "codigo": "de04b99d-d58b-4a09-9bee-d711eaf0a843",
+    "fechaCompra": "2025-05-01T22:22:16.7060098",
+    "precio": 15.0,
+    "idComprador": "E1",
+    "nombreComprador": "Ana",
+    "esEmpleado": true,
+    "fechaValida": "2025-05-02T22:22:16.7041733",
+    "utilizado": false
+  },
+  {
+    "tipo": "TiqueteGeneral",
+    "codigo": "26e73742-252e-4473-86d2-ee7227e5b908",
+    "fechaCompra": "2025-05-01T19:11:12.6533291",
+    "precio": 100.0,
+    "idComprador": "C1",
+    "nombreComprador": "Carlos",
+    "esEmpleado": false,
+    "categoria": "ORO",
+    "utilizado": false
+  },
+  {
+    "tipo": "TiqueteGeneral",
+    "codigo": "dab30866-1349-47ba-9b1a-63a66a77ba51",
+    "fechaCompra": "2025-05-01T19:12:43.3921499",
+    "precio": 100.0,
+    "idComprador": "C1",
+    "nombreComprador": "Carlos",
+    "esEmpleado": false,
+    "categoria": "ORO",
+    "utilizado": false
+  },
+  {
+    "tipo": "FastPass",
+    "codigo": "1e5bf88b-3a86-41c9-a35a-cd0c7c92fa32",
+    "fechaCompra": "2025-05-01T19:11:12.6913639",
+    "precio": 15.0,
+    "idComprador": "E1",
+    "nombreComprador": "Ana",
+    "esEmpleado": true,
+    "fechaValida": "2025-05-02T19:11:12.6905902",
+    "utilizado": false
+  },
+  {
+    "tipo": "EntradaIndividual",
+    "codigo": "69a6180b-6596-4ad3-a2fa-90ad6d3231b8",
+    "fechaCompra": "2025-05-01T21:51:43.5596702",
+    "precio": 50.0,
+    "idComprador": "C1",
+    "nombreComprador": "Carlos",
+    "esEmpleado": false,
+    "idAtraccion": "A1",
+    "utilizado": false
+  },
+  {
+    "tipo": "TiqueteGeneral",
+    "codigo": "8bad4b33-6363-4b15-8787-7d1f73bafa73",
+    "fechaCompra": "2025-05-01T22:22:16.6926073",
+    "precio": 100.0,
+    "idComprador": "C1",
+    "nombreComprador": "Carlos",
+    "esEmpleado": false,
+    "categoria": "ORO",
+    "utilizado": true
+  },
+  {
+    "tipo": "FastPass",
+    "codigo": "c9219ae2-b092-463e-9031-da23a4fbaba6",
+    "fechaCompra": "2025-05-01T21:51:43.5643419",
+    "precio": 15.0,
+    "idComprador": "E1",
+    "nombreComprador": "Ana",
+    "esEmpleado": true,
+    "fechaValida": "2025-05-02T21:51:43.5637798",
+    "utilizado": false
+  },
+  {
+    "tipo": "FastPass",
+    "codigo": "3ea7ea0e-b956-4824-a027-7539795f99c3",
+    "fechaCompra": "2025-05-01T19:12:43.4046173",
+    "precio": 15.0,
+    "idComprador": "E1",
+    "nombreComprador": "Ana",
+    "esEmpleado": true,
+    "fechaValida": "2025-05-02T19:12:43.4046173",
+    "utilizado": false
+  },
+  {
+    "tipo": "TiqueteGeneral",
+    "codigo": "05dadf2c-80e0-4aca-8a2f-bbc861b4611f",
+    "fechaCompra": "2025-05-01T21:51:43.5498744",
+    "precio": 100.0,
+    "idComprador": "C1",
+    "nombreComprador": "Carlos",
+    "esEmpleado": false,
+    "categoria": "ORO",
+    "utilizado": false
+  },
+  {
+    "tipo": "EntradaIndividual",
+    "codigo": "49591878-db88-490a-b83c-69fb6849df83",
+    "fechaCompra": "2025-05-01T19:11:12.6842193",
+    "precio": 50.0,
+    "idComprador": "C1",
+    "nombreComprador": "Carlos",
+    "esEmpleado": false,
+    "idAtraccion": "A1",
+    "utilizado": false
+  },
+  {
+    "tipo": "EntradaIndividual",
+    "codigo": "5968e448-c305-44dc-b3b4-448a14c8e2a9",
+    "fechaCompra": "2025-05-01T22:22:16.7020709",
+    "precio": 50.0,
+    "idComprador": "C1",
+    "nombreComprador": "Carlos",
+    "esEmpleado": false,
+    "idAtraccion": "A1",
+    "utilizado": false
+  }
+]
