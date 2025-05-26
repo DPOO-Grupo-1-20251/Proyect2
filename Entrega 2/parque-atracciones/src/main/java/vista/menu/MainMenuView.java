@@ -1,17 +1,23 @@
 package vista.menu;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import controlador.ControladorMenuPrincipal;
 
 public class MainMenuView extends JFrame {
 
-    public MainMenuView() {
+    private ControladorMenuPrincipal controlador;
+
+    public MainMenuView(ControladorMenuPrincipal controlador) {
+        this.controlador = controlador;
+
         setTitle("Parque de Atracciones");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(400, 300);
-        setLocationRelativeTo(null); // center on screen
+        setLocationRelativeTo(null); // Center on screen
 
         JPanel mainPanel = new JPanel();
         mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
@@ -29,10 +35,10 @@ public class MainMenuView extends JFrame {
         btnVerAtracciones.setAlignmentX(Component.CENTER_ALIGNMENT);
         btnSalir.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        // Listeners
-        btnComprar.addActionListener(e -> System.out.println("Comprar tiquete"));
-        btnVerAtracciones.addActionListener(e -> System.out.println("Ver atracciones"));
-        btnSalir.addActionListener(e -> System.exit(0));
+        // Action Listeners
+        btnComprar.addActionListener(e -> controlador.comprarTiquete());
+        btnVerAtracciones.addActionListener(e -> controlador.verAtracciones());
+        btnSalir.addActionListener(e -> controlador.salir());
 
         mainPanel.add(titleLabel);
         mainPanel.add(Box.createRigidArea(new Dimension(0, 30)));
@@ -44,10 +50,5 @@ public class MainMenuView extends JFrame {
 
         add(mainPanel);
         setVisible(true);
-    }
-
-    // Optional main method for test running
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(MainMenuView::new);
     }
 }
