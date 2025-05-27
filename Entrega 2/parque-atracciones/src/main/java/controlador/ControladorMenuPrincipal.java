@@ -1,3 +1,4 @@
+// --- File: src/main/java/controlador/ControladorMenuPrincipal.java ---
 package controlador;
 
 import vista.menu.MainMenuView;
@@ -9,18 +10,10 @@ public class ControladorMenuPrincipal {
     private MainMenuView vista;
 
     public ControladorMenuPrincipal() {
-        // 👇 Pass controller instance to the view
         vista = new MainMenuView(this);
-        initListeners();
+        vista.setVisible(true);
     }
 
-    private void initListeners() {
-        vista.getBtnComprar().addActionListener(e -> abrirComprarTiquete());
-        vista.getBtnVerAtracciones().addActionListener(e -> verAtracciones());
-        vista.getBtnSalir().addActionListener(e -> salir());
-    }
-
-    // 👇 Make these public so the view can call them
     public void abrirComprarTiquete() {
         JOptionPane.showMessageDialog(vista, "Aquí irá el menú de compra de tiquetes");
     }
