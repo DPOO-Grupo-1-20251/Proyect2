@@ -1,23 +1,20 @@
 package vista.menu;
 
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import controlador.ControladorMenuPrincipal;
 
 public class MainMenuView extends JFrame {
 
-    private ControladorMenuPrincipal controlador;
+    private JButton btnComprar;
+    private JButton btnVerAtracciones;
+    private JButton btnSalir;
 
     public MainMenuView(ControladorMenuPrincipal controlador) {
-        this.controlador = controlador;
-
         setTitle("Parque de Atracciones");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(400, 300);
-        setLocationRelativeTo(null); // Center on screen
+        setLocationRelativeTo(null); // center on screen
 
         JPanel mainPanel = new JPanel();
         mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
@@ -27,16 +24,16 @@ public class MainMenuView extends JFrame {
         titleLabel.setFont(new Font("Arial", Font.BOLD, 18));
         titleLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        JButton btnComprar = new JButton("Comprar tiquete");
-        JButton btnVerAtracciones = new JButton("Ver atracciones");
-        JButton btnSalir = new JButton("Salir");
+        btnComprar = new JButton("Comprar tiquete");
+        btnVerAtracciones = new JButton("Ver atracciones");
+        btnSalir = new JButton("Salir");
 
         btnComprar.setAlignmentX(Component.CENTER_ALIGNMENT);
         btnVerAtracciones.setAlignmentX(Component.CENTER_ALIGNMENT);
         btnSalir.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        // Action Listeners
-        btnComprar.addActionListener(e -> controlador.comprarTiquete());
+        // Connect buttons to controller
+        btnComprar.addActionListener(e -> controlador.abrirComprarTiquete());
         btnVerAtracciones.addActionListener(e -> controlador.verAtracciones());
         btnSalir.addActionListener(e -> controlador.salir());
 
@@ -50,5 +47,17 @@ public class MainMenuView extends JFrame {
 
         add(mainPanel);
         setVisible(true);
+    }
+
+    public JButton getBtnComprar() {
+        return btnComprar;
+    }
+
+    public JButton getBtnVerAtracciones() {
+        return btnVerAtracciones;
+    }
+
+    public JButton getBtnSalir() {
+        return btnSalir;
     }
 }
