@@ -1,8 +1,9 @@
 package vista.menu;
 
+import controlador.ControladorMenuPrincipal;
+
 import javax.swing.*;
 import java.awt.*;
-import controlador.ControladorMenuPrincipal;
 
 public class MainMenuView extends JFrame {
 
@@ -32,7 +33,7 @@ public class MainMenuView extends JFrame {
         btnVerAtracciones.setAlignmentX(Component.CENTER_ALIGNMENT);
         btnSalir.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        // Connect buttons to controller
+        // ✅ Hook to controlador
         btnComprar.addActionListener(e -> controlador.abrirComprarTiquete());
         btnVerAtracciones.addActionListener(e -> controlador.verAtracciones());
         btnSalir.addActionListener(e -> controlador.salir());

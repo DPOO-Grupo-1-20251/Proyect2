@@ -18,23 +18,28 @@ public class ComprarTiqueteView extends JFrame {
         JPanel panel = new JPanel(new GridLayout(3, 2, 10, 10));
         panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
+        // Nombre
         panel.add(new JLabel("Nombre del usuario:"));
         nombreUsuarioField = new JTextField();
         panel.add(nombreUsuarioField);
 
+        // Atracciones
         panel.add(new JLabel("Atracción:"));
-        atraccionCombo = new JComboBox<>(new String[]{"Montaña Rusa", "Casa del Terror", "Carrusel"});
+        atraccionCombo = new JComboBox<>(new String[]{
+            "Montaña Rusa", "Casa del Terror", "Carrusel"
+        });
         panel.add(atraccionCombo);
 
+        // Botón Comprar
         btnComprar = new JButton("Comprar");
-        panel.add(new JLabel()); // Empty cell for alignment
+        panel.add(Box.createGlue());  // Better spacing than JLabel vacío
         panel.add(btnComprar);
 
         add(panel);
     }
 
     public String getNombreUsuario() {
-        return nombreUsuarioField.getText();
+        return nombreUsuarioField.getText().trim();
     }
 
     public String getAtraccionSeleccionada() {
