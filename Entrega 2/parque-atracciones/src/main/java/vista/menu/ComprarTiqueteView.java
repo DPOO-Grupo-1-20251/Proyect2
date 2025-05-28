@@ -5,48 +5,56 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 
 public class ComprarTiqueteView extends JFrame {
-    private JTextField nombreUsuarioField;
-    private JComboBox<String> atraccionCombo;
-    private JButton btnComprar;
+
+    private JTextField txtNombreUsuario;
+    private JTextField txtAtraccion;
+    private JComboBox<String> comboTipoTiquete;
+    private JButton btnGenerar;
 
     public ComprarTiqueteView() {
         setTitle("Comprar Tiquete");
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        setSize(400, 200);
+        setSize(400, 250);
         setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
-        JPanel panel = new JPanel(new GridLayout(3, 2, 10, 10));
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridLayout(4, 2, 10, 10));
         panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
-        // Nombre
-        panel.add(new JLabel("Nombre del usuario:"));
-        nombreUsuarioField = new JTextField();
-        panel.add(nombreUsuarioField);
+        panel.add(new JLabel("Nombre del Usuario:"));
+        txtNombreUsuario = new JTextField();
+        panel.add(txtNombreUsuario);
 
-        // Atracciones
         panel.add(new JLabel("Atracción:"));
-        atraccionCombo = new JComboBox<>(new String[]{
-            "Montaña Rusa", "Casa del Terror", "Carrusel"
-        });
-        panel.add(atraccionCombo);
+        txtAtraccion = new JTextField();
+        panel.add(txtAtraccion);
 
-        // Botón Comprar
-        btnComprar = new JButton("Comprar");
-        panel.add(Box.createGlue());  // Better spacing than JLabel vacío
-        panel.add(btnComprar);
+        panel.add(new JLabel("Tipo de Tiquete:"));
+        comboTipoTiquete = new JComboBox<>(new String[]{"Regular", "VIP", "Descuento"});
+        panel.add(comboTipoTiquete);
+
+        btnGenerar = new JButton("Generar Tiquete");
+        panel.add(new JLabel()); // empty space
+        panel.add(btnGenerar);
 
         add(panel);
+        setVisible(true);
     }
 
     public String getNombreUsuario() {
-        return nombreUsuarioField.getText().trim();
+        return txtNombreUsuario.getText();
     }
 
-    public String getAtraccionSeleccionada() {
-        return (String) atraccionCombo.getSelectedItem();
+    public String getAtraccion() {
+        return txtAtraccion.getText();
     }
 
-    public void setComprarAction(ActionListener listener) {
-        btnComprar.addActionListener(listener);
+    public String getTipoTiquete() {
+        return (String) comboTipoTiquete.getSelectedItem();
+    }
+
+    // ✅ THIS IS THE CRUCIAL METHOD YOUR CONTROLLER CALLS
+    public void addGenerarListener(ActionListener listener) {
+        btnGenerar.addActionListener(listener);
     }
 }
