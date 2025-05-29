@@ -38,7 +38,7 @@ public class ComprarTiqueteView extends JFrame {
         panel.add(btnGenerar);
 
         add(panel);
-        setVisible(true);
+        //setVisible(true);
     }
 
     public String getNombreUsuario() {

@@ -2,6 +2,7 @@ package controlador;
 
 import vista.menu.ComprarTiqueteView;
 import vista.menu.TicketViewer;
+import utils.QRGenerator;
 
 import java.awt.image.BufferedImage;
 
@@ -20,11 +21,10 @@ public class ControladorComprarTiquete {
             String atraccion = vista.getAtraccion();
             String tipoTiquete = vista.getTipoTiquete();
 
-            // Aquí generarías el QR real. Por ahora es null.
-            BufferedImage qr = null;
+            String contenidoQR = nombreUsuario + " - " + atraccion + " - " + tipoTiquete;
+            BufferedImage qr = QRGenerator.generateFakeQR(contenidoQR, 150);
 
-            // Mostrar el ticket con los datos recolectados
-            TicketViewer.mostrarTiquete(nombreUsuario, atraccion, qr);
+            TicketViewer.mostrarTiquete(nombreUsuario, atraccion, tipoTiquete, qr);
         });
     }
 }
