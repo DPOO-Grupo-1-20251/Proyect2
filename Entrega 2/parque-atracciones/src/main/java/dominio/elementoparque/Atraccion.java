@@ -33,7 +33,7 @@ public abstract class Atraccion extends ElementoParque implements LugarTrabajo {
     // ✅ Campo existente: restricciones médicas
     private List<String> restriccionesMedicas = new ArrayList<>();
 
-    public Atraccion(String id, String nombre, String ubicacion, int cupoMaximo, int empleadosMinimos, NivelExclusividad nivelExclusividad) {
+    public Atraccion(String id, String nombre, String ubicacion, int cupoMaximo, int empleadosMinimos) {
         super(id, nombre, cupoMaximo);
 
         if (empleadosMinimos < 0) {
@@ -41,7 +41,6 @@ public abstract class Atraccion extends ElementoParque implements LugarTrabajo {
         }
         this.ubicacion = ubicacion;
         this.empleadosMinimos = empleadosMinimos;
-        this.nivelExclusividad = nivelExclusividad;
         this.empleadosAsignados = new ArrayList<>();
         this.capacitacionesRequeridas = new HashSet<>();
     }

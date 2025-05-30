@@ -61,7 +61,7 @@ public abstract class ElementoParque {
      *     ElementoParque atraccion = new AtraccionCultural("A1", "Castillo del Terror", 40);
      * </pre>
      */
-    protected ElementoParque(String id, String nombre, int cupoMaximo, boolean esDeTemporada, LocalDateTime fechaInicioTemporada, LocalDateTime fechaFinTemporada) {
+    protected ElementoParque(String id, String nombre, int cupoMaximo) {
         if (id == null || id.trim().isEmpty()) {
             throw new DatosInvalidosException("El ID no puede ser nulo o vacío.");
         }
@@ -75,8 +75,6 @@ public abstract class ElementoParque {
         this.nombre = nombre;
         this.cupoMaximo = cupoMaximo;
         this.esDeTemporada = false;
-        this.fechaInicioTemporada = fechaInicioTemporada;
-        this.fechaFinTemporada = fechaFinTemporada;
         this.climaNoPermitido = new ArrayList<>();
     }
 
