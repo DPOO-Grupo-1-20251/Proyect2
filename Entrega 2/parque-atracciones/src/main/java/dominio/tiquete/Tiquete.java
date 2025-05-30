@@ -20,11 +20,12 @@ public abstract class Tiquete implements Serializable {
 
     protected Usuario comprador;
 
-    public Tiquete(String codigo, LocalDateTime fechaHoraEmision, double precio,
+    public Tiquete(String codigo, LocalDateTime fechaHoraEmision, double precio, boolean utilizado,
                    String identificacionComprador, String nombreComprador) {
         this.codigo = codigo;
         this.fechaHoraEmision = fechaHoraEmision;
         this.precio = precio;
+        this.utilizado = utilizado;
         this.identificacionComprador = identificacionComprador;
         this.nombreComprador = nombreComprador;
     }

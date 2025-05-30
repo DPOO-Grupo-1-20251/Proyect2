@@ -11,14 +11,17 @@ public class TiqueteGeneral extends Tiquete {
     private boolean esEmpleado;
     private CategoriaTiquete categoria;
 
+    private LocalDateTime fechaActivacion;
+
     public TiqueteGeneral(String codigo, LocalDateTime fechaHoraEmision, double precio,
                           String identificacionComprador, String nombreComprador,
                           boolean esEmpleado, CategoriaTiquete categoria,
-                          Usuario comprador) {
+                          Usuario comprador, LocalDateTime fechaActivacion) {
         super(codigo, fechaHoraEmision, precio, identificacionComprador, nombreComprador);
         this.esEmpleado = esEmpleado;
         this.categoria = categoria;
         this.comprador = comprador;
+        this.fechaActivacion = fechaActivacion;
     }
 
     public CategoriaTiquete getCategoria() {
