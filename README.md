@@ -264,4 +264,8 @@ El siguiente diagrama ilustra específicamente cómo esta interacción funciona 
 ![Diagrama - Interacción Consola Automatizada](./Entrega%202/parque-atracciones/doc/diagrams/generated/interaction-console-automation.svg)
 *(Nota: Este diagrama muestra cómo un proceso externo, como un script de prueba, controla y observa la aplicación `parque-atracciones` a través de sus flujos estándar de entrada/salida en la consola).*
 
+## 8. Modelo MVC
+
+![Diagrama - Interacción Consola Automatizada](./Entrega%202/parque-atracciones/doc/diagrams/generated/diagrama-mvc.svg)
+
 ---
